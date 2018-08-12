@@ -42,9 +42,10 @@ def create_app():
 
     from . import rest
     api = Api(app)
-    api.add_resource(rest.City, '/api/city/<int:id>')
-    api.add_resource(rest.CityName, '/api/city_name/<string:name>')
-    api.add_resource(rest.Region, '/api/region/<int:id>')
+    api.add_resource(rest.City, '/api/city/name/<string:name>')
+    api.add_resource(rest.CityId, '/api/city/id/<int:id>')
+    api.add_resource(rest.Region, '/api/region/name/<string:name>')
+    api.add_resource(rest.RegionId, '/api/region/id/<int:id>')
 
     @app.cli.command()
     def init_db():

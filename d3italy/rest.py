@@ -5,29 +5,29 @@ from . import models
 from  . import schemas
 
 
-class City(Resource):
+class CityId(Resource):
     def get(self, id):
         schema = schemas.CitySchema()
         item = models.City.query.filter_by(id=id).first()
         return schema.dump(item)
 
 
-class CityName(Resource):
+class City(Resource):
     def get(self, name):
-        schema = schemas.CityNameSchema()
+        schema = schemas.CitySchema()
         item = models.City.query.filter_by(name=name).first()
         return schema.dump(item)
 
 
-class Region(Resource):
+class RegionId(Resource):
     def get(self, id):
         schema = schemas.RegionSchema()
         item = models.Region.query.filter_by(id=id).first()
         return schema.dump(item)
 
 
-class RegionName(Resource):
+class Region(Resource):
     def get(self, name):
-        schema = schemas.RegionNameSchema()
+        schema = schemas.RegionSchema()
         item = models.Region.query.filter_by(name=name).first()
         return schema.dump(item)

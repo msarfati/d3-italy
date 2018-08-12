@@ -1,0 +1,146 @@
+rank,name_it,name_en,region_it,pop
+1,Roma,Rome,Lazio,2872800
+2,Milano,Milan,Lombardia,1366180
+3,Napoli,Naples,Campania,966144
+4,Torino,Turin,Piemonte,882523
+5,Palermo,Palermo,Sicilia,668405
+6,Genova,Genoa,Liguria,580097
+7,Bologna,Bologna,Emilia-Romagna,389261
+8,Firenze,Florence,Toscana,380948
+9,Bari,Bari,Puglia,323370
+10,Catania,Catania,Sicilia,311620
+11,Venezia,Venice,Veneto,261321
+12,Verona,Verona,Veneto,257275
+13,Messina,Messina,Sicilia,234293
+14,Padova,Padua,Veneto,210440
+15,Trieste,Trieste,Friuli-Venezia Giulia,204338
+16,Taranto,Taranto,Puglia,198283
+17,Brescia,Brescia,Lombardia,196745
+18,Parma,Parma,Emilia-Romagna,195687
+19,Prato,Prato,Toscana,193325
+20,Modena,Modena,Emilia-Romagna,185273
+21,Reggio di Calabria,Reggio Calabria,Calabria,181447
+22,Reggio nell'Emilia,Reggio Emilia,Emilia-Romagna,171944
+23,Perugia,Perugia,Umbria,165683
+24,Ravenna,Ravenna,Emilia-Romagna,159115
+25,Livorno,Livorno,Toscana,158371
+26,Cagliari,Cagliari,Sardegna,154106
+27,Foggia,Foggia,Puglia,151372
+28,Rimini,Rimini,Emilia-Romagna,149403
+29,Salerno,Salerno,Campania,133970
+30,Ferrara,Ferrara,Emilia-Romagna,132278
+31,Sassari,Sassari,Sardegna,126769
+32,Latina,Latina,Lazio,126470
+33,Giugliano in Campania,Giugliano in Campania,Campania,124361
+34,Monza,Monza,Lombardia,123598
+35,Siracusa,Syracuse,Sicilia,121605
+36,Bergamo,Bergamo,Lombardia,120923
+37,Pescara,Pescara,Abruzzo,119217
+38,Trento,Trento,Trentino-Alto Adige,117997
+39,Forlì,Forlì,Emilia-Romagna,117863
+40,Vicenza,Vicenza,Veneto,111620
+41,Terni,Terni,Umbria,111189
+42,Bolzano,Bolzano,Trentino-Alto Adige,107317
+43,Novara,Novara,Piemonte,104183
+44,Piacenza,Piacenza,Emilia-Romagna,103082
+45,Ancona,Ancona,Marche,100924
+46,Andria,Andria,Puglia,99857
+47,Udine,Udine,Friuli-Venezia Giulia,99518
+48,Arezzo,Arezzo,Toscana,99419
+49,Cesena,Cesena,Emilia-Romagna,96760
+50,Lecce,Lecce,Puglia,95441
+51,Pesaro,Pesaro,Marche,94958
+52,Barletta,Barletta,Puglia,94477
+53,Alessandria,Alessandria,Piemonte,93980
+54,La Spezia,La Spezia,Liguria,93311
+55,Pistoia,Pistoia,Toscana,90195
+56,Pisa,Pisa,Toscana,90118
+57,Catanzaro,Catanzaro,Calabria,89718
+58,Guidonia Montecelio,Guidonia Montecelio,Lazio,89288
+59,Lucca,Lucca,Toscana,89243
+60,Brindisi,Brindisi,Puglia,87141
+61,Torre del Greco,Torre del Greco,Campania,85332
+62,Treviso,Treviso,Veneto,84954
+63,Busto Arsizio,Busto Arsizio,Lombardia,83405
+64,Como,Como,Lombardia,83320
+65,Marsala,Marsala,Sicilia,82802
+66,Grosseto,Grosseto,Toscana,82036
+67,Sesto San Giovanni,Sesto San Giovanni,Lombardia,81773
+68,Pozzuoli,Pozzuoli,Campania,81141
+69,Varese,Varese,Lombardia,80544
+70,Fiumicino,Fiumicino,Lazio,79630
+71,Casoria,Casoria,Campania,77087
+72,Corigliano-Rossano,Corigliano-Rossano,Calabria,77076
+73,Asti,Asti,Piemonte,76211
+74,Cinisello Balsamo,Cinisello Balsamo,Lombardia,75723
+75,Caserta,Caserta,Campania,75561
+76,Gela,Gela,Sicilia,74858
+77,Aprilia,Aprilia,Lazio,74190
+78,Ragusa,Ragusa,Sicilia,73638
+79,Pavia,Pavia,Lombardia,72773
+80,Cremona,Cremona,Lombardia,72077
+81,Carpi,Carpi,Emilia-Romagna,71148
+82,Quartu Sant'Elena,Quartu Sant'Elena,Sardegna,70879
+83,Lamezia Terme,Lamezia Terme,Calabria,70834
+84,Altamura,Altamura,Puglia,70514
+85,Imola,Imola,Emilia-Romagna,69936
+86,L'Aquila,L’Aquila,Abruzzo,69439
+87,Massa,Massa,Toscana,69037
+88,Trapani,Trapani,Sicilia,67923
+89,Viterbo,Viterbo,Lazio,67798
+90,Cosenza,Cosenza,Calabria,67239
+91,Potenza,Potenza,Basilicata,67211
+92,Castellammare di Stabia,Castellammare di Stabia,Campania,65922
+93,Afragola,Afragola,Campania,64817
+94,Vittoria,Vittoria,Sicilia,64212
+95,Crotone,Crotone,Calabria,63941
+96,Pomezia,Pomezia,Lazio,63641
+97,Vigevano,Vigevano,Lombardia,63153
+98,Carrara,Carrara,Toscana,62537
+99,Caltanissetta,Caltanissetta,Sicilia,62317
+100,Viareggio,Viareggio,Toscana,62079
+101,Fano,Fano,Marche,60978
+102,Savona,Savona,Liguria,60632
+103,Matera,Matera,Basilicata,60403
+104,Olbia,Olbia,Sardegna,60261
+105,Legnano,Legnano,Lombardia,60177
+106,Acerra,Acerra,Campania,59910
+107,Marano di Napoli,Marano di Napoli,Campania,59862
+108,Benevento,Benevento,Campania,59789
+109,Molfetta,Molfetta,Puglia,59470
+110,Agrigento,Agrigento,Sicilia,59329
+111,Faenza,Faenza,Emilia-Romagna,58797
+112,Cerignola,Cerignola,Puglia,58540
+113,Moncalieri,Moncalieri,Piemonte,57234
+114,Foligno,Foligno,Umbria,56999
+115,Manfredonia,Manfredonia,Puglia,56906
+116,Tivoli,Tivoli,Lazio,56542
+117,Cuneo,Cuneo,Piemonte,56281
+118,Trani,Trani,Puglia,56031
+119,Bisceglie,Bisceglie,Puglia,55385
+120,Bitonto,Bitonto,Puglia,55127
+121,Bagheria,Bagheria,Sicilia,55047
+122,Anzio,Anzio,Lazio,54710
+123,Portici,Portici,Campania,54577
+124,Modica,Modica,Sicilia,54530
+125,Sanremo,Sanremo,Liguria,54529
+126,Avellino,Avellino,Campania,54353
+127,Teramo,Teramo,Abruzzo,54338
+128,Montesilvano,Montesilvano,Abruzzo,54194
+129,Siena,Siena,Toscana,53901
+130,Gallarate,Gallarate,Lombardia,53425
+131,Velletri,Velletri,Lazio,53188
+132,Cava de' Tirreni,Cava de' Tirreni,Campania,53130
+133,San Severo,San Severo,Puglia,53015
+134,Aversa,Aversa,Campania,52794
+135,Ercolano,Ercolano,Campania,52763
+136,Civitavecchia,Civitavecchia,Lazio,52671
+137,Acireale,Acireale,Sicilia,52269
+138,Mazara del Vallo,Mazara del Vallo,Sicilia,51488
+139,Rovigo,Rovigo,Veneto,51149
+140,Pordenone,Pordenone,Friuli-Venezia Giulia,51127
+141,Battipaglia,Battipaglia,Campania,51005
+142,Rho,Rho,Lombardia,50904
+143,Chieti,Chieti,Abruzzo,50770
+144,Scafati,Scafati,Campania,50686
+145,Scandicci,Scandicci,Toscana,50645
