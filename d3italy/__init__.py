@@ -2,12 +2,17 @@ import click
 import os
 
 from flask import Flask
+from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
-
+from flask_restful import Api
 
 db = SQLAlchemy()
+ma = Marshmallow()
 
-def create_app(test_config=None):
+from .models import *
+
+
+def create_app():
     # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_envvar('APP_CONFIG')
@@ -28,19 +33,33 @@ def create_app(test_config=None):
         pass
 
     db.init_app(app)
+    ma.init_app(app)
+
 
     from . import italy
     app.register_blueprint(italy.bp)
     app.add_url_rule('/', endpoint='index')
 
+    from . import rest
+    api = Api(app)
+    api.add_resource(rest.City, '/api/city/<int:id>')
+    api.add_resource(rest.CityName, '/api/city_name/<string:name>')
+    api.add_resource(rest.Region, '/api/region/<int:id>')
+
     @app.cli.command()
     def init_db():
+        '''Initializes database.'''
+        db.drop_all()
         db.create_all()
+        db.session.commit()
 
     @app.cli.command()
     def populate_db():
-        from .models import City
-        db.session.add(City(name='test city'))
+        '''Populates the database with default data.'''
+        from . import models
+        region = models.Region(name='test_region')
+        city = models.City(name='test_city', region=region)
+        db.session.add(region, city)
         db.session.commit()
 
     return app
