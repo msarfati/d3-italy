@@ -1,0 +1,3 @@
+graft d3italy/static
+graft d3italy/templates
+global-exclude *.pyc

@@ -1,0 +1,22 @@
+region_en,region_it,region_wiki,status,pop,pop_cent,area_km,area_cent,pop_density,capital,capital_wiki,comuni,prov_metro
+Abruzzo,Abruzzo,en.wikipedia.org/wiki/Abruzzo,Ordinary,1326513,2.19%,10832,3.59%,122,L'Aquila,en.wikipedia.org/wiki/L'Aquila,305,4
+Aosta Valley,Valle d'Aosta,en.wikipedia.org/wiki/Aosta_Valley,Autonomous,127329,0.21%,3261,1.08%,39,Aosta,en.wikipedia.org/wiki/Aosta,74,1
+Apulia,Puglia,en.wikipedia.org/wiki/Apulia,Ordinary,4077166,6.72%,19541,6.47%,209,Bari,en.wikipedia.org/wiki/Bari,258,6
+Basilicata,Basilicata,en.wikipedia.org/wiki/Basilicata,Ordinary,573694,0.95%,10073,3.33%,57,Potenza,en.wikipedia.org/wiki/Potenza,131,2
+Calabria,Calabria,en.wikipedia.org/wiki/Calabria,Ordinary,1970521,3.25%,15222,5.04%,129,Catanzaro,en.wikipedia.org/wiki/Catanzaro,405,5
+Campania,Campania,en.wikipedia.org/wiki/Campania,Ordinary,5850850,9.64%,13671,4.53%,428,Naples,en.wikipedia.org/wiki/Naples,550,5
+Emilia-Romagna,Emilia-Romagna,en.wikipedia.org/wiki/Emilia-Romagna,Ordinary,4448146,7.33%,22453,7.43%,198,Bologna,en.wikipedia.org/wiki/Bologna,333,9
+Friuli-Venezia Giulia,Friuli-Venezia Giulia,en.wikipedia.org/wiki/Friuli-Venezia_Giulia,Autonomous,1221218,2.01%,7862,2.60%,155,Trieste,en.wikipedia.org/wiki/Trieste,216,4
+Lazio,Lazio,en.wikipedia.org/wiki/Lazio,Ordinary,5888472,9.70%,17232,5.70%,342,Rome,en.wikipedia.org/wiki/Rome,378,5
+Liguria,Liguria,en.wikipedia.org/wiki/Liguria,Ordinary,1571053,2.59%,5416,1.79%,290,Genoa,en.wikipedia.org/wiki/Genoa,235,4
+Lombardy,Lombardia,en.wikipedia.org/wiki/Lombardy,Ordinary,10008349,16.50%,23864,7.90%,419,Milan,en.wikipedia.org/wiki/Milan,1523,12
+Marches,Marche,en.wikipedia.org/wiki/Marche,Ordinary,1543752,2.54%,9401,3.11%,164,Ancona,en.wikipedia.org/wiki/Ancona,229,5
+Molise,Molise,en.wikipedia.org/wiki/Molise,Ordinary,312027,0.51%,4461,1.48%,70,Campobasso,en.wikipedia.org/wiki/Campobasso,136,2
+Piedmont,Piemonte,en.wikipedia.org/wiki/Piedmont,Ordinary,4404246,7.26%,25387,8.40%,173,Turin,en.wikipedia.org/wiki/Turin,1202,8
+Sardinia,Sardegna,en.wikipedia.org/wiki/Sardinia,Autonomous,1658138,2.73%,24100,7.98%,69,Cagliari,en.wikipedia.org/wiki/Cagliari,377,5
+Sicily,Sicilia,en.wikipedia.org/wiki/Sicily,Autonomous,5074261,8.36%,25832,8.55%,196,Palermo,en.wikipedia.org/wiki/Palermo,390,9
+Trentino-South Tyrol,Trentino-Alto Adige,en.wikipedia.org/wiki/Trentino-Alto_Adige/S%C3%BCdtirol,Autonomous,1059114,1.75%,13606,4.50%,78,Trento,en.wikipedia.org/wiki/Trento,293,2
+Tuscany,Toscana,en.wikipedia.org/wiki/Tuscany,Ordinary,3744398,6.17%,22987,7.61%,163,Florence,en.wikipedia.org/wiki/Florence,276,10
+Umbria,Umbria,en.wikipedia.org/wiki/Umbria,Ordinary,891181,1.47%,8464,2.80%,105,Perugia,en.wikipedia.org/wiki/Perugia,92,2
+Veneto,Veneto,en.wikipedia.org/wiki/Veneto,Ordinary,4915123,8.10%,18407,6.09%,267,Venice,en.wikipedia.org/wiki/Venice,575,7
+Italy,Italia,,—,60665551,100.00%,302073,100.00%,201,Rome,en.wikipedia.org/wiki/Rome,7978,107
