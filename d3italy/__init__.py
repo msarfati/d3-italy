@@ -66,23 +66,28 @@ def create_app():
                     name=i.get('key'),
                     name_en=i.get('region_en'),
                     name_it=i.get('region_it'),
-                    status=models.region.RegionStatus.autonomous if i.get('status') == 'Autonomous'\
-                        else models.region.RegionStatus.ordinary,
+                    status=i.get('status'),
                     population=i.get('pop'),
                     area=i.get('area_km'),
                     comuni=i.get('comuni'),
                 ))
         db.session.commit()
+
         with open('data/cities.csv', 'r') as csvfile:
             reader = csv.DictReader(csvfile)
             for i in reader:
-                db.session.add(models.City(
+                region = models.Region.query.filter_by(name_it=i.get('region_it')).first()
+                city = models.City(
                     name=i.get('name_it'),
                     name_en=i.get('name_en'),
                     name_it=i.get('name_it'),
-                    region=models.Region.query.filter_by(name_it=i.get('region_it')).first(),
+                    region=region,
                     population=i.get('pop'),
-                    capital=True if i.get('capital') == 't' else False,
-                ))
+                )
+                if i.get('capital') == 't':
+                    region.capital = city
+                    db.session.add(region)
+                db.session.add(city)
+
         db.session.commit()
     return app
