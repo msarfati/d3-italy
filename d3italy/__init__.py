@@ -13,20 +13,9 @@ from .models import *
 
 
 def create_app():
-    # create and configure the app
     app = Flask(__name__, instance_relative_config=True)
     app.config.from_envvar('APP_CONFIG')
-        # SECRET_KEY='dev',
-        # DATABASE=os.path.join(app.instance_path, 'flaskr.sqlite'),
 
-    # if test_config is None:
-    #     # load the instance config, if it exists, when not testing
-    #     app.config.from_pyfile(os.environ['APP_CONFIG'], silent=True)
-    # else:
-    #     # load the test config if passed in
-    #     app.config.from_mapping(test_config)
-
-    # ensure the instance folder exists
     try:
         os.makedirs(app.instance_path)
     except OSError:
@@ -47,12 +36,14 @@ def create_app():
     api.add_resource(rest.Region, '/api/region/name/<string:name>')
     api.add_resource(rest.RegionId, '/api/region/id/<int:id>')
 
+
     @app.cli.command()
     def init_db():
         '''Initializes database.'''
         db.drop_all()
         db.create_all()
         db.session.commit()
+
 
     @app.cli.command()
     def populate_db():
