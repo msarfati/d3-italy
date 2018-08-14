@@ -2,7 +2,7 @@ from . import ma
 
 
 class RegionSchema(ma.Schema):
-    capital = ma.Nested('CitySchema', exclude=('region'))
+    capital = ma.Nested('CitySchema', exclude=('region',))
     class Meta:
         fields = (
             'id',

@@ -15,4 +15,3 @@ class Region(db.Model):
     comuni = db.Column(db.Integer)
     capital_id = db.Column(db.Integer, db.ForeignKey("city.id"))
     capital = db.relationship('City', lazy=True, uselist=False, post_update=True, foreign_keys=capital_id)
-

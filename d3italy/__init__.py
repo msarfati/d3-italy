@@ -2,6 +2,7 @@ import click
 import os
 
 from flask import Flask
+from flask.cli import AppGroup
 from flask_marshmallow import Marshmallow
 from flask_sqlalchemy import SQLAlchemy
 from flask_restful import Api
@@ -24,7 +25,6 @@ def create_app():
     db.init_app(app)
     ma.init_app(app)
 
-
     from . import italy
     app.register_blueprint(italy.bp)
     app.add_url_rule('/', endpoint='index')
@@ -36,8 +36,11 @@ def create_app():
     api.add_resource(rest.Region, '/api/region/name/<string:name>')
     api.add_resource(rest.RegionId, '/api/region/id/<int:id>')
 
+    db_cli = AppGroup('db')
+    db_cli.short_help = "Interacts with the database"
 
-    @app.cli.command()
+
+    @db_cli.command('init')
     def init_db():
         '''Initializes database.'''
         db.drop_all()
@@ -45,7 +48,7 @@ def create_app():
         db.session.commit()
 
 
-    @app.cli.command()
+    @db_cli.command('populate')
     def populate_db():
         '''Populates the database with default data.'''
         from . import models
@@ -69,7 +72,7 @@ def create_app():
             for i in reader:
                 region = models.Region.query.filter_by(name_it=i.get('region_it')).first()
                 city = models.City(
-                    name=i.get('name_it'),
+                    name=i.get('name_it').lower(),
                     name_en=i.get('name_en'),
                     name_it=i.get('name_it'),
                     region=region,
@@ -81,4 +84,6 @@ def create_app():
                 db.session.add(city)
 
         db.session.commit()
+
+    app.cli.add_command(db_cli)
     return app
