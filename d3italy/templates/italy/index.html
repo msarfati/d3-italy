@@ -5,15 +5,16 @@
     <title>GEOPOLITIK.IO -> Italy</title>
     <script type='text/javascript' src='http://d3js.org/d3.v3.min.js'></script>
     <style>
+
+        :root {
+            --main-txt-color: rgb(0, 209, 216);
+        }
+
         body {
             font-family: Courier New, Courier, monospace;
             font-size: 30;
             background-color: black;
-            color: rgb(0, 175, 0);
-        }
-        #region {
-            text-transform:capitalize;
-            color: rgb(255, 217, 0);
+            color: var(--main-txt-color);
         }
         div.tooltip {
             position: absolute;
@@ -28,40 +29,74 @@
             pointer-events: none;
             text-transform: capitalize;
         }
+        svg {
+            border: var(--main-txt-color) solid 1px;
+            float: left;
+        }
+        #info-box {
+            margin-left: 5px;
+            display: inline-block;
+            /*float: right;*/
+        }
     </style>
 </head>
 
 <body>
     <script>
+        'use strict';
+        //( function() {
+        // API code
+        //var xhrRegionURL = "http://localhost:5000/api/region/name"
+        var regionInfo = function(d) {
+            //regionName = d.properties.name;
+            var regionNameURL = "{{ url_for('region', name='', _external=True) }}"
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', regionNameURL + d);
+            xhr.responseType = 'json';
+            xhr.send();
+            xhr.onload = function() {
+                var obj = xhr.response;
+                var h1 = document.createElement('H1');
+                h1.textContent = `Region: ${obj.name_en}`;
+                document.getElementById("info-box").appendChild(h1);
+                var par = document.createElement('P');
+                par.textContent = `Population: ${obj.population} | Area: ${obj.area}km | Capital: ${obj.capital.name_en} | Comuni: ${obj.comuni}`
+                document.getElementById("info-box").appendChild(par);
+            };
+        }
+
         // D3 Code
         var width = 800;
         var height = 800;
+        var txtColor = "rgb(0, 209, 216)";
 
         var div = d3.select("body").append("div")
-        .attr("class", "tooltip")
-        .style("opacity", 0);
+            .attr("class", "tooltip")
+            .style("opacity", 0);
 
         var canvas = d3.select("body").append("svg")
+            .attr("id", "map")
+            .attr("class", "row")
             .attr("width", width)
             .attr("height", height);
 
-        d3.json("{{ url_for('static', filename='italy-regions.geojson') }}", function(data){
+        d3.json("{{ url_for('static', filename='italy-regions.geojson') }}", function(data) {
 
             var group = canvas.selectAll("g")
                 .data(data.features)
                 .enter()
-                .append("g")
+                .append("g");
 
             var projection = d3.geo.mercator()
                 .scale(3000)
-                .center([15, 43.8])
+                .center([15, 43.8]);
 
             var path = d3.geo.path().projection(projection);
 
             var areas = group.append("path")
                 .attr("d", path)
                 .attr("class", "area")
-                .attr("fill", "green")
+                .attr("fill", txtColor)
                 .attr("stroke", "black")
                 .on("mouseover", function(d) {
                     d3.select(this).attr("fill", "yellow");
@@ -72,13 +107,19 @@
                         .style("top", (d3.event.pageY - 28) + "px");
                 })
                 .on("mouseout", function(d) {
-                    d3.select(this).attr("fill", "green");
+                    d3.select(this).attr("fill", txtColor);
                     div.transition()
                         .style("opacity", 0);
                 })
+                .on("click", function(d) {
+                    document.getElementById("info-box")
+                        .textContent = regionInfo(d.properties.name);
+                });
         });
-
+    //})();
     </script>
+    <div id="info-box">
+    </div>
 </body>
 
 </html>
