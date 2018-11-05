@@ -31,10 +31,11 @@ def create_app():
 
     from . import rest
     api = Api(app)
-    api.add_resource(rest.City, '/api/city/name/<string:name>')
+    api.add_resource(rest.City, '/api/city')
     api.add_resource(rest.CityId, '/api/city/id/<int:id>')
-    api.add_resource(rest.Region, '/api/region/name/<string:name>')
-    api.add_resource(rest.RegionId, '/api/region/id/<int:id>')
+    api.add_resource(rest.RegionId, '/api/region/<int:id>')
+    api.add_resource(rest.Region, '/api/region')
+    # api.add_resource(rest.RegionId, '/api/region/id/<int:id>')
 
     db_cli = AppGroup('db')
     db_cli.short_help = "Interacts with the database"
